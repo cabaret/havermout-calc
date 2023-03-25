@@ -44,13 +44,13 @@ export default function Home() {
             <div className="flex justify-between gap-x-8">
               <span>pindakaas:</span>
               <strong>
-                {numberOfDays === "" ? 0 : (numberOfDays, 10) * 20}g
+                {numberOfDays === "" ? 0 : parseInt(numberOfDays, 10) * 20}g
               </strong>
             </div>
             <div className="flex justify-between gap-x-8">
               <span>water:</span>
               <strong>
-                {numberOfDays === "" ? 0 : (numberOfDays, 10) * 50}ml
+                {numberOfDays === "" ? 0 : parseInt(numberOfDays, 10) * 50}ml
               </strong>
             </div>
           </pre>
