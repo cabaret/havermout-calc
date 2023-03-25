@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 
 export default function Home() {
-  const [numberOfDays, setNumberOfDays] = useState<number>(4);
+  const [numberOfDays, setNumberOfDays] = useState<string>("4");
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function Home() {
               type="text"
               className="border w-12 ml-2 pl-2"
               value={numberOfDays}
-              onChange={(e) => setNumberOfDays(parseInt(e.target.value, 10))}
+              onChange={(e) => setNumberOfDays(e.target.value)}
               inputMode="numeric"
               pattern="[0-9]*"
             />
@@ -31,19 +31,27 @@ export default function Home() {
           <pre className="mt-8 p-4 inline-flex border-2 border-gray-600 justify-center text-left flex-col gap-y-2">
             <div className="flex justify-between gap-x-8">
               <span>havermout:</span>
-              <strong>{numberOfDays * 40}g</strong>
+              <strong>
+                {numberOfDays === "" ? 0 : parseInt(numberOfDays, 10) * 40}g
+              </strong>
             </div>
             <div className="flex justify-between gap-x-8">
               <span>vanillepoeder:</span>
-              <strong>{numberOfDays * 30}g</strong>
+              <strong>
+                {numberOfDays === "" ? 0 : parseInt(numberOfDays, 10) * 30}g
+              </strong>
             </div>
             <div className="flex justify-between gap-x-8">
               <span>pindakaas:</span>
-              <strong>{numberOfDays * 20}g</strong>
+              <strong>
+                {numberOfDays === "" ? 0 : (numberOfDays, 10) * 20}g
+              </strong>
             </div>
             <div className="flex justify-between gap-x-8">
               <span>water:</span>
-              <strong>{numberOfDays * 50}ml</strong>
+              <strong>
+                {numberOfDays === "" ? 0 : (numberOfDays, 10) * 50}ml
+              </strong>
             </div>
           </pre>
         </div>
