@@ -19,10 +19,12 @@ export default function Home() {
           <label className="flex justify-center">
             aantal dagen:{" "}
             <input
-              type="number"
+              type="text"
               className="border w-12 ml-2 pl-2"
               value={numberOfDays}
               onChange={(e) => setNumberOfDays(parseInt(e.target.value, 10))}
+              inputMode="numeric"
+              pattern="[0-9]*"
             />
           </label>
 
