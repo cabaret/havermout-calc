@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 
 export default function Home() {
-  const [numberOfDays, setNumberOfDays] = useState<string>("4");
+  const [numberOfDays, setNumberOfDays] = useState<string>("2");
 
   return (
     <>
@@ -17,7 +17,7 @@ export default function Home() {
 
         <div className="text-center pt-8">
           <label className="flex justify-center">
-            aantal dagen:{" "}
+            aantal porties:{" "}
             <input
               type="text"
               className="border w-12 ml-2 pl-2"
